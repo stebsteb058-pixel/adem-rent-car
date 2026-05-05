@@ -20,7 +20,7 @@
    
   },
   "devDependencies": {
-    "nodemon": "^24.14.1"
+  "nodemon": "^3.1.14"
   },
   "keywords": [],
   "author": "",
