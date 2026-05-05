@@ -1,0 +1,10 @@
+# .gitlab-ci.yml
+pages: # Le nom du job doit être 'pages' pour que GitLab Pages le reconnaisse
+  stage: deploy
+  script:
+    - echo "Rien à construire, les fichiers sont déjà dans le dossier 'public'."
+  artifacts:
+    paths:
+      - public # Indique à GitLab de prendre le dossier 'public' pour le publier
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH # Ne déploie que depuis la branche par défaut (ex: main)
